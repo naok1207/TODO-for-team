@@ -1,24 +1,56 @@
-# README
+# portfolio
+___
+## ○プロダクト名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### ___TODO for team___
+> TODOリストを作成し、チームで扱えるように拡張する
+___
+## ○機能
 
-Things you may want to cover:
+### TODOリスト
+> 今後の実行しなければいけない事柄をリストとして記録し、チェックボックスを用いて終了を確認する。
 
-* Ruby version
+### ログイン機能
+> ユーザ認証システム。ログインすることでデータの閲覧を可能とする。
 
-* System dependencies
+### ユーザプロフィール
+> ユーザに簡単な任意設定のプロフィールページを作成
 
-* Configuration
+### フォロー機能
+> 友達として任意のユーザとの連絡手段を確保、容易なメッセージのやりとりを可能とする。
 
-* Database creation
+### チームプロジェクト管理
+> 部署やチーム事にプロジェクトをメンバーと共有すことを可能とする。プロジェクトIDとプロジェクトpassを設定することにより作成。招待による認証も追加。チーム内でのメッセージのやりとりを可能とする。
 
-* Database initialization
+## ○開発環境
+MacOS version:10.15.2
+Ruby version:
+Mysql version:8.0
+nginx
+Ruby on Rails version:
+AWS
 
-* How to run the test suite
+## ○作業手順
+### TODOリスト作成
+> 
 
-* Services (job queues, cache servers, search engines, etc.)
+## ○データベース設計
+### エンティティ抽出
+> 
 
-* Deployment instructions
+command
 
-* ...
+$ rails new <application_name> <option_list> 
+
+options:    -B (skip-bundle)
+            -d mysql (mysqlを利用)
+            --skip-turbolinks
+            --skip-test
+
+$ bundle config --local build.mysql2 "--with-ldflags=-L/usr/local/opt/openssl/lib" (mysql エラーの修正)
+
+$ bundle init
+
+$ bundle install --path vendor/bundle --jobs=4
+
+$ rails db:create
