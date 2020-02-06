@@ -36,7 +36,37 @@ AWS
 
 ## ○データベース設計
 ### エンティティ抽出
-> 
+> TODO_table
+- by_time (いついつまでに)
+- title (タイトル)
+- body (細かい内容)
+- user_id (作成者ID)
+- team_id (チームID)
+
+> user_table
+- name (名前)
+- email (メールアドレス)
+- password (パスワード)
+
+> profile_table
+- nickname　(ニックネーム)
+- detail (詳細)
+- locate (住処)
+- birthday (生年月日)
+
+> team_table
+- name (チーム名)
+- projectID (プロジェクトID)
+- projectPass (プロジェクトPass)
+
+> follow_table
+- user_id
+- follow_id
+
+> team_relation 1 対 多
+- team_id 
+- user_id
+
 
 command
 
