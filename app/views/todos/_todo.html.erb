@@ -1,0 +1,4 @@
+<div>
+    <li><%= link_to todo.title, todo_path(todo.id) %> <%= link_to '編集', edit_todo_path(todo.id) %> <%= link_to '削除', todo, method: :delete, data: { confirm: "本当に削除しますか?" } %></li>
+    <li><%= time_ago_in_words(todo.created_at) %>前</li>
+</div>

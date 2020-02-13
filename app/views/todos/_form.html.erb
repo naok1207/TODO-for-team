@@ -1,0 +1,13 @@
+<%= form_for(@todo) do |f| %>
+  
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+
+    <%= f.label :by_time %>
+    <%= f.text_field :by_time %>
+      
+    <%= f.submit yield(:submit_text)%>
+<% end %>

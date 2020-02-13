@@ -1,0 +1,6 @@
+<div>
+    <h2>「<%= @todo.title %>」 詳細 </h2>
+    <li><%= @todo.content %> </li>
+    <li><%= @todo.by_time %> </li>
+    <%= link_to '編集', edit_todo_path(@todo.id) %> <%= link_to '削除', @todo, method: :delete, data: { confirm: "本当に削除しますか?" } %>
+</div>
