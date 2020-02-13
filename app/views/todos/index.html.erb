@@ -1,6 +1,5 @@
 <% provide(:title, 'TODO一覧') %>
 <h1>TODO一覧</h1>
-<%= will_paginate %>
 <%= render @todos %>
 <%= will_paginate %>
 <%= link_to 'TODO追加', new_todo_path %>

@@ -3,7 +3,7 @@ class TodosController < ApplicationController
     before_action :correct_user,   only: [:edit, :update]
 
     def index
-        @todos = current_user.todos.paginate(page: params[:page])
+        @todos = current_user.todos.paginate(page: params[:page], per_page: 5)
     end
 
     def show
