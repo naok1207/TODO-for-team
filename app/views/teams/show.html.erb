@@ -1,0 +1,6 @@
+<h2><%= @team.name %></h2>
+<% @team.users.each do |user| %>
+    <%= render 'user', user: user %>
+<% end %>
+<%= link_to '編集', edit_team_path(@team.id), class: '' %>
+<%= link_to '削除', @team, method: :delete, data: { confirm: "#{@team.name}を削除しますか?" } %>

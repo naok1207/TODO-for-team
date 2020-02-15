@@ -1,0 +1,14 @@
+<%= form_for(@team) do |f| %>
+  
+    <%= f.label :name, 'チーム名' %>
+    <%= f.text_field :name, class: '' %>
+    <div class="ml-5 mt-3">
+        <% @users.each do |user| %>
+            <p>
+                <%= f.check_box :user_ids, { multiple: true }, user.id, nil %>
+                <%= f.label :user_ids, user.name %>
+            </p>
+        <% end %>
+    </div>
+    <%= f.submit yield(:submit_text)%>
+<% end %>

@@ -6,6 +6,9 @@ class User < ApplicationRecord
     has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
     has_many :followers, through: :reverse_of_relationships, source: :user
 
+    has_many :team_members
+    has_many :teams, through: :team_members
+
     attr_accessor :remember_token, :activation_token, :reset_token
     before_save :downcase_email
     before_create :create_activation_digest

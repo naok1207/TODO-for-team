@@ -3,14 +3,14 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <%= link_to "Home", root_path, class: 'navbar-brand' %>
-    <% if logged_in? %>
     <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
+            <% if logged_in? %>
             <li class="nav-item">
                 <%= link_to "TODO", todos_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
-                <%= link_to "チーム", '#', class: 'nav-link' %>
+                <%= link_to "チーム", teams_path, class: 'nav-link' %>
             </li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -32,12 +32,15 @@
                     <li><%= link_to "Log out", logout_path, method: :delete, class: 'dropdown-item' %></li>
                 </ul>
             </li>
+            <% else %>
+            <li class="nav-item">
+                <%= link_to "Log in", login_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "Sign up", signup_path, class: 'nav-link' %>
+            </li>
+            <% end %>        
         </ul>
     </div>
-    <% else %>
-    <li class="nav-item">
-        <%= link_to "Log in", login_path, class: 'nav-link' %>
-    </li>
-    <% end %>
+
 </nav>    
-</nav>

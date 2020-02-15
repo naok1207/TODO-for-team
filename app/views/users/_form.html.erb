@@ -1,16 +1,15 @@
 <%= form_for(@user) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
   
-    <%= f.label :name %>
-    <%= f.text_field :name%>
-  
-    <%= f.label :email %>
-    <%= f.email_field :email%>
-  
-    <%= f.label :password %>
-    <%= f.password_field :password%>
-  
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation%>
-  
-    <%= f.submit yield(:button_text)%>
-  <% end %>
+  <%= f.label :email %>
+  <%= f.email_field :email, class: "form-control" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+
+  <%= f.submit "送信", class: "btn btn-lg btn-primary btn-block mt-3" %>
+<% end %>
